@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AuraSync — Run Your Salon Smarter</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="splash-body">
+
+        <section class="splash" id="splash">
+            <!-- floating ambient blobs, purely decorative -->
+            <div class="splash-blob blob-1"></div>
+            <div class="splash-blob blob-2"></div>
+            <div class="splash-blob blob-3"></div>
+
+            <a href="home.html" class="splash-skip" id="splashSkip">Skip intro →</a>
+
+            <div class="splash-content">
+                <div class="splash-logo-wrap">
+                    <div class="splash-logo-badge">
+                        <img src="1.png" alt="AuraSync logo" class="splash-logo">
+                    </div>
+                </div>
+
+                <h1 class="splash-title" aria-label="AURA SYNC">
+                    <span class="splash-letters" id="splashLetters"></span>
+                </h1>
+
+                <p class="splash-tagline" id="splashTagline">
+                    Run your salon <span class="splash-highlight">smarter</span>,<br>
+                    anywhere in the world.
+                </p>
+
+                <button class="btn-primary btn-large splash-enter" id="splashEnter" onclick="window.location.href='home.html'">
+                    Enter AuraSync
+                </button>
+
+                <div class="splash-progress-track">
+                    <div class="splash-progress-fill" id="splashProgressFill"></div>
+                </div>
+            </div>
+        </section>
+
+        <script src="script.js"></script>
+    </body>
+</html>
