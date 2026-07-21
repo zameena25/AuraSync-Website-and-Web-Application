@@ -17,13 +17,13 @@
 
 ---
 
-## 📖 About
+## About
 
 AuraSync is a booking and business-management platform designed for solo stylists, nail artists, and multi-location salon groups alike. It replaces the spreadsheets, phone tag, and paper appointment books that eat into a salon owner's day with one clean dashboard for bookings, staff, payments, and growth.
 
 Built as an **e-business** from the ground up, AuraSync brings together online booking, SMS reminders, analytics, multi-location support, and loyalty programs into a single accessible tool — priced so a solo artist and a 15-location group can both find a plan that fits.
 
-## ✨ Features
+## Features
 
 - 📅 **Online Booking** — real-time appointment scheduling for clients and staff
 - 💳 **Integrated Payments** — cart, checkout, and bill generation (PayPal-ready)
@@ -43,7 +43,7 @@ Built as an **e-business** from the ground up, AuraSync brings together online b
 | Mobile Wrapper | Capacitor (Android) |
 | Offline Support | Service Worker + Web App Manifest (PWA) |
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 AuraSyncApp/
@@ -66,7 +66,7 @@ AuraSyncApp/
 └── README.md
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Run the website
 Just open any `.html` file in `www/` in a browser, or serve the folder locally:
@@ -83,7 +83,7 @@ npx cap open android
 ```
 Then hit **Run ▶** in Android Studio to launch on an emulator or a connected device.
 
-## 👥 Team
+## Team
 
 | Name | Role |
 |---|---|
@@ -92,10 +92,10 @@ Then hit **Run ▶** in Android Studio to launch on an emulator or a connected d
 | Nethmini Umendra | Lead UI/UX Designer |
 | Asanthi | Head of Operations |
 
-## 🎓 Academic Context
+## Academic Context
 
 This project was developed for **NIT3274 – Small IT Business**, Victoria University Melbourne, as a group assignment demonstrating the planning, design, and implementation of an e-business (Business Idea: *Innovative IT Solutions*). It showcases both a fully responsive business website and a companion mobile application built from the same codebase.
 
-## 📄 License
+## License
 
 This repository is provided for academic evaluation purposes only and is not intended for commercial use or distribution.
