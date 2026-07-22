@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+        <title> AuraSync - Run Your Salon Smarter</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!--Navigation Header-->
+        <header class="navbar">
+            <div class="container">
+                <div class="navbar-content">
+                    <div class="logo">
+                        <img src="1.png" alt="AuraSync Logo" class="logo-icon">
+                        <span class="logo-text">AuraSync</span>
+                    </div>
+                    <nav class="nav-links">
+                        <a href="home.html" class="nav-link ">Home</a>
+                        <a href="home.html#services" class="nav-link">Services</a>
+                        <a href="pricing_page.html" class="nav-link active">Pricing</a>
+                        <a href="home.html#about" class="nav-link">About</a>
+                        <a href="contact_page.html" class="nav-link">Contact</a>
+                        <a href="payment.html" class="nav-link">Payment</a>
+                    </nav>
+                    <div class="nav-buttons">
+                        <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode">🌙</button>
+                        <button class="btn-login" onclick="window.location.href='login.html'">Login</button>
+                        <button class="btn-primary">Start Free Trial</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+    <!-- Pricing Header Section -->
+    <section class="pricing-hero">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">PRICING</p>
+                <h1 class="section-title">Simple, Transparent Pricing</h1>
+                <p class="section-description">No hidden fees. No long-term contracts. Cancel anytime.</p>
+            </div>
+
+            <!-- Pricing Toggle -->
+            <div class="pricing-toggle">
+                <button class="toggle-btn active" data-period="monthly">Monthly</button>
+                <button class="toggle-btn" data-period="annual">Annual <span class="save-badge">Save 20%</span></button>
+            </div>
+
+            <!-- Pricing Cards -->
+            <div class="pricing-cards">
+                <!-- Starter Plan -->
+                <div class="pricing-card starter">
+                    <h3 class="plan-name">Starter</h3>
+                    <p class="plan-description">Perfect for solo stylists and small salons just getting started.</p>
+                    <div class="price">
+                        <span class="amount" data-monthly="$29" data-annual="$280">$29</span>
+                        <span class="period">/mo</span>
+                    </div>
+                    <ul class="features-list">
+                        <li>✓ Up to 2 staff members</li>
+                        <li>✓ Online booking page</li>
+                        <li>✓ SMS reminders (100/mo)</li>
+                        <li>✓ Basic analytics</li>
+                        <li>✓ Email support</li>
+                    </ul>
+                    <button class="btn-secondary btn-block">Get Started Free</button>
+                </div>
+
+                <!-- Pro Plan (Most Popular) -->
+                <div class="pricing-card pro most-popular">
+                    <div class="popular-badge">⭐ Most Popular</div>
+                    <h3 class="plan-name">Pro</h3>
+                    <p class="plan-description">The complete toolkit for growing salons that want it all.</p>
+                    <div class="price">
+                        <span class="amount" data-monthly="$59" data-annual="$565">$59</span>
+                        <span class="period">/mo</span>
+                    </div>
+                    <ul class="features-list">
+                        <li>✓ Up to 10 staff members</li>
+                        <li>✓ Custom booking page + widget</li>
+                        <li>✓ Unlimited SMS reminders</li>
+                        <li>✓ Advanced analytics & reports</li>
+                        <li>✓ Loyalty program</li>
+                    </ul>
+                    <button class="btn-primary btn-block" onclick="window.location.href='signup.html'">Start Free Trial</button>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card enterprise">
+                    <h3 class="plan-name">Enterprise</h3>
+                    <p class="plan-description">Multi-location management and custom integrations for salon groups.</p>
+                    <div class="price">
+                        <span class="amount">Custom</span>
+                    </div>
+                    <ul class="features-list">
+                        <li>✓ Unlimited staff & locations</li>
+                        <li>✓ White-label booking page</li>
+                        <li>✓ Dedicated account manager</li>
+                        <li>✓ API access & integrations</li>
+                        <li>✓ SLA & priority support</li>
+                    </ul>
+                    <button class="btn-secondary btn-block">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can I switch plans at any time?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! You can upgrade or downgrade your plan anytime. Changes take effect at the start of your next billing cycle.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Is there a free trial?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely! All plans include a 14-day free trial. No credit card required to get started.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What happens if I go over my SMS limit?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>For Starter plans, additional SMS messages are $0.05 each. Pro and Enterprise plans include unlimited SMS.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do you offer discounts for multi-location salons?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Enterprise plans include custom pricing based on your number of locations and staff members. Contact our sales team for a quote.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Start your free 14-day trial today</h2>
+            <p>No credit card required. Cancel anytime. Full access from day one.</p>
+            <button class="btn-primary btn-large" onclick="window.location.href='signup.html'">Start Free Trial</button>
+        </div>
+    </section>
+
+    <!-- Footer (Same as Homepage) -->
+    <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section brand">
+                        <div class="footer-logo">
+                            <img src="AuraSync logo.png" alt="AuraSync Logo" class="logo-icon">
+                            <span class="logo-text">AuraSync</span>
+                        </div>
+                        <p>The all-in-one salon management platform trusted by 5,000+ salons worldwide. Run smarter, grow faster.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link">𝕏</a>
+                            <a href="#" class="social-link">📷</a>
+                            <a href="#" class="social-link">f</a>
+                            <a href="#" class="social-link">in</a>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h4>PRODUCT</h4>
+                        <ul>
+                            <li><a href="#services">Online Booking</a></li>
+                            <li><a href="#services">SMS Reminders</a></li>
+                            <li><a href="#services">Analytics</a></li>
+                            <li><a href="#services">Multi-Location</a></li>
+                            <li><a href="#services">Loyalty Program</a></li>
+                        </ul>
+                    </div>
+                    <div class="foorter-section">
+                        <h4>COMPANY</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="pricing_page.html">Pricing</a></li>
+                            <li><a href="cantact_page.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>SUPPORT</h4>
+                        <ul>
+                            <li><a href="#">Help Centre</a></li>
+                            <li><a href="#">Book a Demo</a></li>
+                            <li><a href="#">System Status</a></li>
+                            <li><a href="#">API Docs</a></li>
+                            <li><a href="#">Community</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>LEGAL</h4>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">GDPR</a></li>
+                            <li><a href="#">Security</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+                    <div class="newsletter-content">
+                        <h4>Stay in the loop</h4>
+                        <p>Get product updates, salon tips and industry news.</p>
+                    </div>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Enter Your Email" class="email-input">
+                        <button class="btn-primary">Subscribe</button>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2026 AuraSync Pty Ltd. ABN 42 123 456 789. All rights reserved.</p>
+                    <p style="color: rgba(255,255,255,0.4); font-size: 12px; margin-top: 6px;">
+                        ⚠️ This website is for a class assignment project and not for commercial purpose.
+                    </p>
+                    <div class="footer-links">
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                        <a href="#">Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
