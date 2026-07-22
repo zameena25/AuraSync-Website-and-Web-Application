@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AuraSync - Payment</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <!--Navigation Header-->
+        <header class="navbar">
+            <div class="container">
+                <div class="navbar-content">
+                    <div class="logo">
+                        <img src="1.png" alt="AuraSync Logo" class="logo-icon">
+                        <span class="logo-text">AuraSync</span>
+                    </div>
+                    <nav class="nav-links">
+                        <a href="home.html" class="nav-link">Home</a>
+                        <a href="services.html" class="nav-link">Services</a>
+                        <a href="pricing_page.html" class="nav-link">Pricing</a>
+                        <a href="about.html" class="nav-link">About</a>
+                        <a href="cnotact_page.html" class="nav-link">Contact</a>
+                        <a href="payment.html" class="nav-link active">Payment</a>
+                    </nav>
+                    <div class="nav-buttons">
+                        <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode">🌙</button>
+                        <button class="btn-login" onclick="window.location.href='login.html'">Login</button>
+                        <button class="btn-primary">Start Free Trial</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!--Payment Hero-->
+        <section class="payment-hero">
+            <div class="container">
+                <p class="section-label">PAYMENT</p>
+                <h1 class="section title" style="font-size: 42px;"> Choose Your Plan & Pay.</h1>
+                <p class="section-description">Secure checkout powered by PayPal.Cancel anytime.</p>
+            </div>
+        </section>
+
+        <!--Shopping cart & payment section-->
+        <!-- Payment Layout -->
+        <section>
+            <div class="container">
+                <div class="payment-layout">
+                    <!-- LEFT: Cart -->
+                    <div class="cart-section">
+                        <h2>🛒 Your Cart</h2>
+                        
+                        <div class="cart-items-container" id="cart-items">
+                            <!-- Rendered by JS -->
+                        </div>
+                        
+                        <!-- Plan Selector -->
+                        <div class="add-plan-section">
+                            <p>Select a plan:</p>
+                            <div class="plan-selector-grid">
+                                <div class="plan-select-card" onclick="selectPlan('starter')" data-plan="starter">
+                                    <button class="plan-select-btn" data-plan="starter">Starter</button>
+                                    <p class="plan-select-price">$29<span>/mo</span></p>
+                                    <ul class="plan-select-features">
+                                        <li>✓ Up to 2 staff</li>
+                                        <li>✓ Online booking</li>
+                                        <li>✓ 100 SMS/mo</li>
+                                        <li>✓ Basic analytics</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="plan-select-card active-plan-card" onclick="selectPlan('pro')" data-plan="pro">
+                                    <span class="plan-popular-badge">⭐ Most Popular</span>
+                                    <button class="plan-select-btn active-plan" data-plan="pro">Pro</button>
+                                    <p class="plan-select-price">$59<span>/mo</span></p>
+                                    <ul class="plan-select-features">
+                                        <li>✓ Up to 10 staff</li>
+                                        <li>✓ Custom booking page</li>
+                                        <li>✓ Unlimited SMS</li>
+                                        <li>✓ Advanced analytics</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="plan-select-card" onclick="selectPlan('enterprise')" data-plan="enterprise">
+                                    <button class="plan-select-btn" data-plan="enterprise">Enterprise</button>
+                                    <p class="plan-select-price">$199<span>/mo</span></p>
+                                    <ul class="plan-select-features">
+                                        <li>✓ Unlimited staff</li>
+                                        <li>✓ White-label page</li>
+                                        <li>✓ Dedicated manager</li>
+                                        <li>✓ API access</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Order Summary -->
+                        <div class="order-summary">
+                            <h3>Order Summary</h3>
+                            <div class="summary-row">
+                                <span>Subtotal</span>
+                                <span id="subtotal">$59.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>GST (10%)</span>
+                                <span id="gst">$5.90</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Total</span>
+                                <span id="total">$64.90</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Generate Bill -->
+                        <button onclick="generateBill()" class="btn-primary generate-bill-btn">
+                            🧾 Generate Bill / Invoice
+                        </button>
+                        <!-- Bill Output -->
+                        <div class="bill-output" id="bill-output"></div>
+                    </div>
+                    
+                    <!-- RIGHT: PayPal -->
+                    <div class="checkout-section">
+                        <h2>💳 Secure Payment</h2>
+                        <div class="checkout-box">
+                            <p>Select a plan on the left, then complete your secure payment below.</p>
+                            <div id="paypal-button-container"></div>
+                            <p class="paypal-note">🔒 Protected by PayPal Buyer Protection</p>
+                            <div class="paypal-logo-row">
+                                <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_111x69.jpg" alt="PayPal Accepted">
+                            </div>
+                        </div>
+                        
+                        <!-- Trust Badges -->
+                        <div class="payment-trust-badges">
+                            <div class="payment-badge">
+                                <span class="payment-badge-icon">🔒</span>
+                                <span class="payment-badge-text">SSL Encrypted</span>
+                            </div>
+                            <div class="payment-badge">
+                                <span class="payment-badge-icon">↩️</span>
+                                <span class="payment-badge-text">Cancel Anytime</span>
+                            </div>
+                            <div class="payment-badge">
+                                <span class="payment-badge-icon">📧</span>
+                                <span class="payment-badge-text">Invoice by Email</span>
+                            </div>
+                            <div class="payment-badge">
+                                <span class="payment-badge-icon">⭐</span>
+                                <span class="payment-badge-text">4.9/5 Rated</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!--Footer-->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section brand">
+                        <div class="footer-logo">
+                            <img src="AuraSync logo.png" class="logo-icon">
+                            <span class="logo-text">AuraSync</span>
+                        </div>
+                        <p>The all-in-one salon management platform trusted by 5,000+ salons worldwide. Run smarter, grow faster.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link">𝕏</a>
+                            <a href="#" class="social-link">📷</a>
+                            <a href="#" class="social-link">f</a>
+                            <a href="#" class="social-link">in</a>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h4>PRODUCT</h4>
+                        <ul>
+                            <li><a href="#services">Online Booking</a></li>
+                            <li><a href="#services">SMS Reminders</a></li>
+                            <li><a href="#services">Analytics</a></li>
+                            <li><a href="#services">Multi-Location</a></li>
+                            <li><a href="#services">Loyalty Program</a></li>
+                        </ul>
+                    </div>
+                    <div class="foorter-section">
+                        <h4>COMPANY</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="pricing_page.html">Pricing</a></li>
+                            <li><a href="cantact_page.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>SUPPORT</h4>
+                        <ul>
+                            <li><a href="#">Help Centre</a></li>
+                            <li><a href="#">Book a Demo</a></li>
+                            <li><a href="#">System Status</a></li>
+                            <li><a href="#">API Docs</a></li>
+                            <li><a href="#">Community</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>LEGAL</h4>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">GDPR</a></li>
+                            <li><a href="#">Security</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+                    <div class="newsletter-content">
+                        <h4>Stay in the loop</h4>
+                        <p>Get product updates, salon tips and industry news.</p>
+                    </div>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Enter Your Email" class="email-input">
+                        <button class="btn-primary">Subscribe</button>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2026 AuraSync Pty Ltd. ABN 42 123 456 789. All rights reserved.</p>
+                    <p style="color: rgba(255,255,255,0.4); font-size: 12px; margin-top: 6px;">
+                        ⚠️ This website is for a class assignment project and not for commercial purpose.
+                    </p>
+                    <div class="footer-links">
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                        <a href="#">Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!--PayPal SDK-->
+    <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=AUD"></script>
+    <script src="script.js"></script>
+    </body>
+</html>
