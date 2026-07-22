@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+        <title> AuraSync - Run Your Salon Smarter</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <!--Navigation Header-->
+        <header class="navbar">
+            <div class="container">
+                <div class="navbar-content">
+                    <div class="logo">
+                        <img src="1.png" alt="AuraSync Logo" class="logo-icon">
+                        <span class="logo-text">AuraSync</span>
+                    </div>
+                    <nav class="nav-links">
+                        <a href="home.html" class="nav-link">Home</a>
+                        <a href="services.html" class="nav-link">Services</a>
+                        <a href="pricing_page.html" class="nav-link">Pricing</a>
+                        <a href="about.html" class="nav-link">About</a>
+                        <a href="contact_page.html" class="nav-link active">Contact</a>
+                        <a href="payment.html" class="nav-link">Payment</a>
+                    </nav>
+                    <div class="nav-buttons">
+                        <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode">🌙</button>
+                        <button class="btn-login" onclick="window.location.href='login.html'">Login</button>
+                        <button class="btn-primary">Start Free Trial</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero -->
+        <section class="contact-hero">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-label">Contact Us</p>
+                    <h1 class="section-title">We'd Love to Hear From You</h1>
+                    <p class="section-description">Our team is friendly, fast and ready to help. Reach out any time.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="form-section">
+                <h2>Send us a message</h2>
+                <form id="contactForm" onsubmit="handleSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Full Name <span class="required">*</span></label>
+                            <input type="text" placeholder="Sarah Mitchell" required>
+                        </div>
+                    <div class="form-group">
+                        <label>Email Address <span class="required">*</span></label>
+                        <input type="email" placeholder="sarah@luxehair.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Subject</label>
+                    <input type="text" placeholder="How can we help you?">
+                </div>
+                <div class="form-group">
+                    <label>Message <span class="required">*</span></label>
+                    <textarea placeholder="Tell us about your salon and how we can help..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-send">Send Message</button>
+            </form>
+        </div>
+
+        <div class="details-section">
+            <h2>Contact Details</h2>
+
+            <div class="detail-item">
+                <div class="detail-icon email">&#9993;</div>
+                <div class="detail-content">
+                    <h4>Email</h4>
+                    <p><a href="mailto:hello@salonsync.io">hello@aurasync.io</a></p>
+                </div>
+            </div>
+
+            <div class="detail-item">
+                <div class="detail-icon phone">&#9742;</div>
+                <div class="detail-content">
+                    <h4>Phone</h4>
+                    <p><a href="tel:+61290001234">+61 2 9000 1234</a></p>
+                </div>
+            </div>
+
+            <div class="detail-item">
+                <div class="detail-icon address">&#128205;</div>
+                <div class="detail-content">
+                    <h4>Address</h4>
+                    <p>Level 12, 80 Collins St<br>Melbourne VIC 3000, Australia</p>
+                </div>
+            </div>
+
+            <div class="social-row">
+                <a href="#" class="social-icon" title="X (Twitter)">&#120143;</a>
+                <a href="#" class="social-icon" title="Instagram">&#128247;</a>
+                <a href="#" class="social-icon" title="Facebook">&#128172;</a>
+                <a href="#" class="social-icon" title="LinkedIn">&#128188;</a>
+            </div>
+
+            <div class="map-container" style="height:250px; border-radius: 16px; overflow: hidden;">
+                <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.95373631531676!3d-37.81720997975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b8f9a7a0b1%3A0x5045675218ce6e0!2s80%20Collins%20St%2C%20Melbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2sau!4v1234567890"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            </div>
+
+            <p class="office-hours"><strong>Office hours:</strong> Mon–Fri, 9am–6pm AEST</p>
+        </div>
+    </section>
+
+    <!-- Quick Answers -->
+    <section class="quick-answers">
+        <h2>Quick answers</h2>
+        <div class="answers-grid">
+            <div class="answer-card">
+                <h3>How quickly can I get started?</h3>
+                <p>You can have your salon live on SalonSync in under 30 minutes. Our onboarding wizard walks you
+                    through every step.</p>
+            </div>
+            <div class="answer-card">
+                <h3>Do you offer phone support?</h3>
+                <p>Yes! Pro and Enterprise plans include phone support. All plans get live chat and email support 7 days
+                    a week.</p>
+            </div>
+            <div class="answer-card">
+                <h3>Can I migrate from another platform?</h3>
+                <p>Absolutely. Our team will help you migrate your client data, booking history, and service menu at no
+                    extra charge.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--Footer-->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section brand">
+                        <div class="footer-logo">
+                            <img src="AuraSync logo.png" alt="AuraSync Logo" class="logo-icon">
+                            <span class="logo-text">AuraSync</span>
+                        </div>
+                        <p>The all-in-one salon management platform trusted by 5,000+ salons worldwide. Run smarter, grow faster.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link">𝕏</a>
+                            <a href="#" class="social-link">📷</a>
+                            <a href="#" class="social-link">f</a>
+                            <a href="#" class="social-link">in</a>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h4>PRODUCT</h4>
+                        <ul>
+                            <li><a href="#services">Online Booking</a></li>
+                            <li><a href="#services">SMS Reminders</a></li>
+                            <li><a href="#services">Analytics</a></li>
+                            <li><a href="#services">Multi-Location</a></li>
+                            <li><a href="#services">Loyalty Program</a></li>
+                        </ul>
+                    </div>
+                    <div class="foorter-section">
+                        <h4>COMPANY</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="pricing_page.html">Pricing</a></li>
+                            <li><a href="cantact_page.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>SUPPORT</h4>
+                        <ul>
+                            <li><a href="#">Help Centre</a></li>
+                            <li><a href="#">Book a Demo</a></li>
+                            <li><a href="#">System Status</a></li>
+                            <li><a href="#">API Docs</a></li>
+                            <li><a href="#">Community</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>LEGAL</h4>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">GDPR</a></li>
+                            <li><a href="#">Security</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+                    <div class="newsletter-content">
+                        <h4>Stay in the loop</h4>
+                        <p>Get product updates, salon tips and industry news.</p>
+                    </div>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Enter Your Email" class="email-input">
+                        <button class="btn-primary">Subscribe</button>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2026 AuraSync Pty Ltd. ABN 42 123 456 789. All rights reserved.</p>
+                    <p style="color: rgba(255,255,255,0.4); font-size: 12px; margin-top: 6px;">
+                        ⚠️ This website is for a class assignment project and not for commercial purpose.
+                    </p>
+                    <div class="footer-links">
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                        <a href="#">Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <script src="script.js"></script>
+    </body>
+</html>
