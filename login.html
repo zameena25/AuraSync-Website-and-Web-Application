@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login - AuraSync</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="auth-page">
+            <!--LEFT PANEL-->
+            <div class="auth-panel auth-panel--left">
+                <div class="logo">
+                    <img src="1.png" alt="AuraSync Logo" class="logo-icon">
+                    <span class="logo-text">AuraSync</span>
+                </div>
+                <div class="auth-panel-body">
+                    <h1 class="auth-panel-heading">Manage Your Salon<br>
+                        <span class="auth-highlight">Smarter</span>
+                    </h1>
+                    <p class="auth-panel-sub">Everything you need to run a modern salon — in one beautiful dashboard.</p>
+                    <ul class="auth-perks">
+                        <li>
+                            <span class="auth-perk-icon">✓</span>
+                            Real-time booking &amp; scheduling
+                        </li>
+                        <li>
+                            <span class="auth-perk-icon">✓</span>
+                            Automated SMS reminders
+                        </li>
+                        <li>
+                            <span class="auth-perk-icon">✓</span>
+                            Powerful analytics &amp; growth insights
+                        </li>
+                    </ul>
+                </div>
+                <div class="auth-panel-footer">
+                    <div class="auth-social-proof">
+                        <div class="auth-avatars">
+                            <div class="avatar ps">PS</div>
+                            <div class="avatar cm">MC</div>
+                            <div class="avatar at">AT</div>
+                            <div class="avatar jr">JR</div>
+                        </div>
+                        <p class="auth-proof-text">Joined by 5,000+ salons worldwide</p>
+                    </div>
+                </div>
+
+                <!--DECORATIVE CIRCLES-->
+                <div class="auth-circle auth-coircle--top"></div>
+                <div class="auth-circle auth-circle--mid"></div>
+            </div>
+
+            <!--RIGHT PANEL-->
+            <div class="auth-panel auth-panel--right">
+                <div class="auth-form-wrapper">
+                    <h2 class="auth-form-title">Welcome Back</h2>
+                    <p class="auth-form-sub">Log in to your AuraSync account</p>
+
+                    <form class="auth-form" novalidate>
+                        <div class="form-group">
+                            <label for="emailLogin">Email Address</label>
+                            <input type="email" id="emailLogin" placeholder="sarah@luxhair.com" autocomplete="email">
+                        </div>
+                        <div class="form-group auth-password-group">
+                            <div class="auth-label-row">
+                                <label for="passwrordLogin">Password</label>
+                                <a href="#" class="auth-forgot-link">Forgot Passowrd?</a>
+                            </div>
+                            <input type="password" id="passwordLogin" placeholder="••••••••" autocomplete="current-password">
+                        </div>
+                        <button type="submit" class="auth-submit-btn">Login</button>
+                        <div class="auth-divider">
+                            <span>or</span>
+                        </div>
+                    </form>
+
+                    <p class="auth-switch-text">
+                        Don't have an account? <a href="signup.html" class="auth-switch-link">Sign Up</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
